@@ -1,0 +1,27 @@
+{
+  "name": "hyperlight-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "hyperlight dev",
+    "start": "hyperlight serve",
+    "build": "hyperlight build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BRA1L0R/hyperlight-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BRA1L0R/hyperlight-website/issues"
+  },
+  "homepage": "https://github.com/BRA1L0R/hyperlight-website#readme",
+  "dependencies": {
+    "@hyperlight/jsx": "^0.0.10",
+    "hyperapp": "^2.0.8",
+    "hyperlight": "^0.0.21"
+  }
+}

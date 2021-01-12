@@ -1,0 +1,136 @@
+:root {
+  --gr: linear-gradient(to left, #00d9f6, #40acf5, #3faae5);
+  --shadow: 0px 4px 30px rgba(76, 73, 243, 0.25);
+  --btn-gr: linear-gradient(280deg, #00d9f7 8.9%, #40adf8 52.78%, #3faae6 92.6%);
+  --black: #272626;
+}
+
+body {
+  font-family: sans-serif;
+  color: var(--black);
+  margin: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  min-height: calc(100vh - 96px);
+}
+
+header > div {
+  display: inherit;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  font-size: calc(3rem + 3vw);
+  background: var(--gr);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+header span {
+  font-size: calc(1rem + 1vw);
+  font-weight: 300;
+}
+
+header span strong {
+  font-weight: 600;
+}
+
+a {
+  border: none;
+  padding: 1rem;
+  font-family: Inter, sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  text-decoration: none;
+  color: var(--black);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+div:nth-of-type(2) {
+  margin-top: 100px;
+}
+
+#get_started {
+  background: var(--btn-gr);
+
+  box-shadow: var(--shadow);
+  border-radius: 15px;
+  color: white;
+  padding: 15px 30px;
+  margin-right: 84px;
+}
+
+#get_started:hover {
+  text-decoration: none;
+}
+
+#logo {
+  margin-right: 2rem;
+}
+
+#why_hl {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 60px;
+}
+
+#features_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  place-items: center;
+  padding: 70px 50px;
+  gap: 70px;
+}
+
+#features_grid figure {
+  margin: 0;
+}
+
+#features_grid h3 {
+  font-weight: 600;
+  font-size: 36px;
+}
+#features_grid figure div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#try {
+  padding: 150px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#try a {
+  background: var(--gr);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 5px solid;
+  border-image-source: var(--gr);
+  border-image-slice: 1;
+}
+
+#try a:hover {
+  text-decoration: underline;
+  text-decoration-color: #57aee7;
+  text-decoration-thickness: 5px;
+  text-underline-offset: 0.65rem;
+}
