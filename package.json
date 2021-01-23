@@ -21,6 +21,7 @@
   "homepage": "https://github.com/BRA1L0R/hyperlight-website#readme",
   "dependencies": {
     "@hyperlight/jsx": "^0.0.13",
+    "@tinyhttp/app": "^1.1.11",
     "hyperapp": "^2.0.9",
     "hyperapp-render": "^3.5.0",
     "hyperlight": "^0.0.23",

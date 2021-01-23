@@ -9,6 +9,7 @@ body {
   font-family: sans-serif;
   color: var(--black);
   margin: 0;
+  background-color: white;
 }
 
 header {
@@ -17,7 +18,8 @@ header {
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  min-height: calc(100vh - 96px);
+  padding-top: 0;
+  min-height: calc(100vh - 4rem);
 }
 
 header > div {
@@ -46,7 +48,8 @@ header span strong {
   font-weight: 600;
 }
 
-a {
+#try a,
+header a {
   border: none;
   padding: 1rem;
   font-family: Inter, sans-serif;
@@ -60,7 +63,7 @@ a:hover {
   text-decoration: underline;
 }
 
-div:nth-of-type(2) {
+main > header > div:nth-of-type(2) {
   margin-top: 100px;
 }
 
@@ -92,17 +95,19 @@ div:nth-of-type(2) {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   place-items: center;
-  padding: 70px 50px;
-  gap: 70px;
+  padding: 50px 200px;
+  gap: 50px;
 }
 
 #features_grid figure {
   margin: 0;
+  text-align: center;
 }
 
 #features_grid h3 {
   font-weight: 600;
   font-size: 36px;
+  margin: 16px 0;
 }
 #features_grid figure div {
   display: flex;

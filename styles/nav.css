@@ -2,9 +2,23 @@
   display: flex;
   position: sticky;
   top: 0;
+  flex-direction: row;
   left: 0;
-  justify-content: right;
+  justify-content: space-around;
   padding: 2rem;
+  background: white;
+}
+
+.nav .right {
+  display: inherit;
+  justify-content: right;
+}
+
+.nav .center {
+  text-align: center;
+  gap: 30px;
+  display: grid;
+  grid-auto-flow: column;
 }
 
 .nav img {

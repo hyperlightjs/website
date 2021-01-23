@@ -1,4 +1,5 @@
 import { jsx } from '@hyperlight/jsx'
+import { Footer } from '../components/Footer'
 import { Nav } from '../components/Nav'
 import '../styles/main.css'
 
@@ -59,5 +60,6 @@ export default () => (
         Try Hyperlight online {'->'}
       </a>
     </div>
+    <Footer />
   </main>
 )

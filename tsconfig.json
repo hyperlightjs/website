@@ -4,6 +4,7 @@
     "target": "ESNext",
     "moduleResolution": "Node",
     "preserveSymlinks": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "jsx": "preserve"
   }
 }

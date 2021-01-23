@@ -1,7 +1,8 @@
 # Getting started
+
 ## About Hyperlight
 
-Hyperlight is a lightweight framework based on [Hyperapp]() and [tinyhttp](https://github.com/talentlessguy/tinyhttp). 
+Hyperlight is a lightweight framework based on [Hyperapp]() and [tinyhttp](https://github.com/talentlessguy/tinyhttp).
 
 It is targeted to build exclusively to ESM and is written in TypeScript. It supports JSX syntax and regular HyperScript, as well as [TypeScript](https://www.typescriptlang.org/) and regular JavaScript.
 
@@ -31,6 +32,7 @@ $ pnpm i hyperlight hyperapp
 #### JSX
 
 To enable JSX support install the `@hyperlight/jsx` package:
+
 ```
 $ npm install @hyperlight/jsx
 ```
@@ -48,14 +50,17 @@ export default () => <h1>Hello World</h1>
 There are a few commands that you need to remember (or can just write down in the package.json):
 
 ### Development
+
 #### `hyperlight dev --host [host] --port [port] --directory [directory]`
 
 Start the development server with live reload and no caching / static generation, the arguments are:
-- __--host__: IP or FQDN the http server will listen on.
-- __--port__: HTTP server port
-- __--directory__: project directory
+
+- **--host**: IP or FQDN the http server will listen on.
+- **--port**: HTTP server port
+- **--directory**: project directory
 
 ### Production
+
 #### `hyperlight build [directory]`
 
 Build the current directory, or a given `[directory]` if specified, making it ready for production via `hyperlight serve`.
@@ -65,17 +70,18 @@ The build result will be located in the `.cache` folder.
 ### `hyperlight serve --host [host] --port [port] --directory [directory] --disable-cache`
 
 Starts the production-ready web server (built with [tinyhttp](https://github.com/talentlessguy/tinyhttp/)), the arguments are:
-- __--host__: Same as [development](#development)
-- __--port__: Same as [development](#development)
-- __--directory__: Same as [development](#development)
-- __--disable-cache__: Disable cache headers. This is useful when reverse proxy already sets it's own cache headers
+
+- **--host**: Same as [development](#development)
+- **--port**: Same as [development](#development)
+- **--directory**: Same as [development](#development)
+- **--disable-cache**: Disable cache headers. This is useful when reverse proxy already sets it's own cache headers
 
 ### `hyperlight export --directory [directory] --output [directory]]`
 
 Export the project into a ready-to-serve directory. Currently doesn't support slugs, check [#24](../../issues/24) for status, the arguments are:
 
-- __--directory__: Same as [development](#development)
-- __--output__: Output directory, default is `dist/`
+- **--directory**: Same as [development](#development)
+- **--output**: Output directory, default is `dist/`
 
 ## Creating pages
 
@@ -104,7 +110,8 @@ export const getServerSideState = ({ params }) => params
 ## Data fetching
 
 There are two ways to fetch initial data in Hyperlight:
-- **`getInitialState`** - set initial state to client (similar to `app({ init: { ... } })` 
+
+- **`getInitialState`** - set initial state to client (similar to `app({ init: { ... } })`
 - **`getServerSideState`** - append additional state with access to server context
 
 ### `getInitialState`
@@ -119,7 +126,7 @@ export const getInitialState = () => ({
 })
 ```
 
-__getInitialState__ is an exported function that must return an object representing the initial state of the page. 
+**getInitialState** is an exported function that must return an object representing the initial state of the page.
 
 Runs once in production and each time the page is requested during development.
 
@@ -130,16 +137,16 @@ More about `getInitialState` [here](insertlink) (not yet written)
 ```tsx
 export const getServerSideState = ({ params, req }: Context) => ({
   state: {
-    state1: "Hello World",
+    state1: 'Hello World',
     id: params.id,
     httpVersion: req.httpVersion
   }
 })
 ```
 
-__getServerSideState__ is another exported function that must return a [ServerSideState](insertlink) (not yet written)
+**getServerSideState** is another exported function that must return a [ServerSideState](insertlink) (not yet written)
 
-It get called with a [Context](insertlink) (not yet written) parameter, an object that contains a [Request](https://tinyhttp.v1rtl.site/docs#request) and a [Response](https://tinyhttp.v1rtl.site/docs#response)
+It get called with a [Context](insertlink) (not yet written) parameter, an object that contains a [Request](https://tinyhttp.v1rtl.site/docs#request) and a [Response](https://tinyhttp.v1rtl.site/docs#response).
 
 It gets runt every time the page is requested, both in production and development.
 

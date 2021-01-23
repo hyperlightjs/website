@@ -1,0 +1,13 @@
+main {
+  padding: 36px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+main h1 {
+  font-size: 48px;
+}
+
+main h2 {
+  font-size: 24px;
+}
