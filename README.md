@@ -23,5 +23,5 @@ pnpm dev
 ## Build in prod and serve
 
 ```sh
-pnpm build && pnpm serve
+pnpm build && pnpm start
 ```
