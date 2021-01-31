@@ -9,6 +9,8 @@
 - node: 12.4+
 - pnpm: 5.15+
 
+### Steps
+
 1. Clone
 2. Run `pnpm install`
 
