@@ -8,6 +8,8 @@ export const Footer = () => (
       {' | '}
       <a href="https://github.com/hyperlightjs/hyperlight-website/blob/master/LICENSE">License</a>
     </p>
-    <p>Built with Hyperlight & HyperMDX</p>
+    <p>
+      Built with Hyperlight & <a href="https://github.com/talentlessguy/hypermdx">HyperMDX</a>
+    </p>
   </footer>
 )

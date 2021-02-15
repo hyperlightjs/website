@@ -12,6 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/BRA1L0R/hyperlight-website.git"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -20,11 +21,10 @@
   },
   "homepage": "https://github.com/BRA1L0R/hyperlight-website#readme",
   "dependencies": {
-    "@hyperlight/jsx": "^0.0.13",
-    "@tinyhttp/app": "^1.1.11",
-    "hyperapp": "^2.0.9",
-    "hyperapp-render": "^3.5.0",
-    "hyperlight": "^0.0.23",
-    "hypermdx": "^0.0.4"
+    "@hyperlight/jsx": "^0.0.18",
+    "@tinyhttp/app": "^1.1.12",
+    "hyperapp": "2.0.12",
+    "hyperlight": "0.0.30",
+    "hypermdx": "1.0.0"
   }
 }

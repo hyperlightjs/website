@@ -3,6 +3,18 @@ import { Footer } from '../components/Footer'
 import { Nav } from '../components/Nav'
 import '../styles/main.css'
 
+export const Head = () => (
+  <>
+    <title>Hyperlight — next-gen Hyperapp framework.</title>
+    <meta name="og:title" content="Hyperlight — next-gen Hyperapp framework." />
+    <meta
+      name="og:description"
+      content="Hyperlight — next-gen Hyperapp framework. Supports SSG and SSR, uses esbuild for bundling and hyperapp as a view layer. ESM everywhere, ES2019 as a target."
+    />
+    <link rel="icon" href="/logo.svg" />
+  </>
+)
+
 const Feature = (
   props: {
     logo: string
@@ -19,7 +31,7 @@ const Feature = (
   </figure>
 )
 
-export default () => (
+const Index = () => (
   <main>
     <Nav />
     <header>
@@ -63,3 +75,5 @@ export default () => (
     <Footer />
   </main>
 )
+
+export default Index

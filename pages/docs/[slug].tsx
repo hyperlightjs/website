@@ -1,6 +1,10 @@
 import { jsx } from '@hyperlight/jsx'
 import { Nav } from '../../components/Nav'
 import type { Response } from '@tinyhttp/app'
+import { readdir, readFile } from 'fs/promises'
+
+import '../../styles/main.css'
+import '../../styles/docs.css'
 
 export default ({ Page }) => {
   return {
@@ -10,22 +14,24 @@ export default ({ Page }) => {
 }
 
 export const getServerSideState = async ({ params, res }: { params: Record<string, any>; res: Response }) => {
-  const pages = ['routing']
+  const { url } = import.meta
+
+  const root = url.slice(url.indexOf('///') + 2, url.indexOf('/.cache'))
+
+  const pages = (await readdir(`${root}/docs`)).map((x) => x.slice(0, x.indexOf('.md')))
+
+  const hypermdx = await import('hypermdx').then((mod) => mod.hypermdx)
 
   if (pages.includes(params.slug)) {
-    const { Module } = await import('module')
-
-    const require = Module.createRequire(import.meta.url)
-
-    const { hypermdx } = await require('hypermdx')
-    const { readFileSync } = require('fs')
     const md = hypermdx()
 
-    const { url } = import.meta
+    let file: string
 
-    const root = url.slice(url.indexOf('///') + 2, url.indexOf('/.cache'))
-
-    const file = readFileSync(`${root}/docs/${params.slug}.md`).toString()
+    try {
+      file = (await readFile(`${root}/docs/${params.slug}.md`)).toString()
+    } catch (e) {
+      res.status(500).send(e.message)
+    }
 
     return {
       state: {

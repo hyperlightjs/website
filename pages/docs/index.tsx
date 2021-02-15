@@ -1,4 +1,6 @@
 import { jsx } from '@hyperlight/jsx'
+import { hypermdx } from 'hypermdx'
+import { readFileSync } from 'fs'
 import { Nav } from '../../components/Nav'
 import '../../styles/main.css'
 import '../../styles/docs.css'
@@ -10,14 +12,7 @@ export default ({ Page }) => {
   }
 }
 
-export const getServerSideState = async () => {
-  const { Module } = await import('module')
-
-  const require = Module.createRequire(import.meta.url)
-
-  const { hypermdx } = await require('hypermdx')
-  const { readFileSync } = require('fs')
-
+export const getServerSideState = () => {
   const md = hypermdx()
 
   const { url } = import.meta
