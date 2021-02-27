@@ -35,7 +35,7 @@ const Index = () => (
   <main>
     <Nav />
     <header>
-      <div>
+      <div id="logo_container">
         <img src="/logo.svg" id="logo" />
 
         <div>

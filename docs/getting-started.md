@@ -2,11 +2,15 @@
 
 ## About Hyperlight
 
-Hyperlight is a lightweight framework based on [Hyperapp]() and [tinyhttp](https://github.com/talentlessguy/tinyhttp).
+Hyperlight is a lightweight framework based on [Hyperapp](https://github.com/jorgebucaran/hyperapp) and [tinyhttp](https://github.com/talentlessguy/tinyhttp).
 
-It is targeted to build exclusively to ESM and is written in TypeScript. It supports JSX syntax and regular HyperScript, as well as [TypeScript](https://www.typescriptlang.org/) and regular JavaScript.
+By targeting only ESM Hyperlight avoids module resolution problems and dirty hacks and instead, follows the standards. It also builds blazingly fast thanks to [esbuild](https://github.com/evanw/esbuild/).
 
-The framework supports styling with CSS imports, as well as pre-processors which can be accomplished using [Esbuild plugins](https://esbuild.github.io/plugins/#finding-plugins) (example: [Stylus plugin](https://github.com/ym-project/esbuild-stylus-loader))
+Hyperlight supports JavaScript and [TypeScript](https://www.typescriptlang.org/) out of the box.
+
+Hyperscript (`h()` calls) notation is supported and JSX can be enabled using a special package.
+
+The framework supports CSS imports. Although, you can easily connect preprocessors with the help of [esbuild plugins](https://esbuild.github.io/plugins/#finding-plugins).
 
 ## Project setup
 
@@ -47,7 +51,7 @@ export default () => <h1>Hello World</h1>
 
 ## CLI
 
-There are a few commands that you need to remember (or can just write down in the package.json):
+The Hyperlight CLI provides a set of commands for developing, building and running the app.
 
 ### Development
 

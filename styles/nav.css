@@ -5,8 +5,9 @@
   flex-direction: row;
   left: 0;
   justify-content: space-around;
-  padding: 2rem;
+  padding: 1.5rem;
   background: white;
+  align-items: center;
 }
 
 .nav .right {
@@ -22,7 +23,22 @@
 }
 
 .nav img {
-  margin-left: 16px;
   width: 32px;
   height: 32px;
+}
+
+nav .right > a:nth-child(2) {
+  margin-left: 16px;
+}
+
+@media (max-width: 600px) {
+  .nav {
+    padding: 1.5rem;
+  }
+  .nav > a img:first-of-type {
+    margin: 0;
+  }
+  .nav .center {
+    gap: 40px;
+  }
 }

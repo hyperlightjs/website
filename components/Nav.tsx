@@ -39,7 +39,9 @@ export const Nav = () => (
     </div>
     <div class="right">
       {right.map((item) => (
-        <img src={`/${item.icon}.svg`} alt={item.name} />
+        <a href={item.href}>
+          <img src={`/${item.icon}.svg`} alt={item.name} />
+        </a>
       ))}
     </div>
   </nav>

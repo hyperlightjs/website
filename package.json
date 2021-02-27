@@ -22,9 +22,10 @@
   "homepage": "https://github.com/BRA1L0R/hyperlight-website#readme",
   "dependencies": {
     "@hyperlight/jsx": "^0.0.18",
-    "@tinyhttp/app": "^1.1.12",
+    "@tinyhttp/app": "^1.2.8",
     "hyperapp": "2.0.12",
     "hyperlight": "0.0.30",
-    "hypermdx": "1.0.0"
+    "hypermdx": "1.0.0",
+    "remark-highlight.js": "^6.0.0"
   }
 }
