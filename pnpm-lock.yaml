@@ -2,9 +2,8 @@ dependencies:
   '@hyperlight/jsx': 0.0.18
   '@tinyhttp/app': 1.2.8
   hyperapp: 2.0.12
-  hyperlight: 0.0.30_hyperapp@2.0.12
-  hypermdx: 1.0.0
-  remark-highlight.js: 6.0.0
+  hyperlight: 0.0.31_hyperapp@2.0.12
+  hypermdx: 1.0.1
 lockfileVersion: 5.2
 packages:
   /@babel/parser/7.13.4:
@@ -715,12 +714,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-7Eczs8gIPDrVzT+EksYBcupqMyxSHXXrHOLRRxU2/DicV8789MRBRR8+Hc2uWzUupOs4YS4JzBmBxjjCVBxD/g==
-  /fault/1.0.4:
-    dependencies:
-      format: 0.2.2
-    dev: false
-    resolution:
-      integrity: sha512-CJ0HCB5tL5fYTEA7ToAq5+kTwd++Borf1/bifxd9iT70QcXr4MRrO3Llf8Ifs70q+SJcGHFtnIE/Nw6giCtECA==
   /filing-cabinet/3.0.0:
     dependencies:
       app-module-path: 2.2.0
@@ -754,12 +747,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-dVsPA/UwQ8+2uoFe5GHtiBMu48dWLTdsuEd7CKGlZlD78r1TTWBvDuFaFGKCo/ZfEr95Uk56vZoX86OsHkUeIg==
-  /format/0.2.2:
-    dev: false
-    engines:
-      node: '>=0.4.x'
-    resolution:
-      integrity: sha1-1hcBB+nv3E7TDJ3DkBbflCtctYs=
   /fs.realpath/1.0.0:
     dev: false
     resolution:
@@ -855,10 +842,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-zQgLKqF+O2F72S1aa4y2ivxzSlko3MAvxkwG8ehGmNiqd98BIN3JM1rAJPmplEyLmGLO2QZYJtIneOSZ2YbJuA==
-  /highlight.js/10.6.0:
-    dev: false
-    resolution:
-      integrity: sha512-8mlRcn5vk/r4+QcqerapwBYTe+iPL5ih6xrNylxrnBdHQiijDETfXX7VIxC3UiCRiINBJfANBAsPzAvRQj8RpQ==
   /hyperapp-render/4.0.0:
     dependencies:
       '@types/node': 14.14.31
@@ -869,7 +852,7 @@ packages:
     dev: false
     resolution:
       integrity: sha512-kDwTunVPE9Lw8HIt7K4vNwEz2xBKhRUBYh4fiXUcZPtFEP6Pfe41bsNbbIO9a5NbI2IeTOwfPrQpTQxQC493MA==
-  /hyperlight/0.0.30_hyperapp@2.0.12:
+  /hyperlight/0.0.31_hyperapp@2.0.12:
     dependencies:
       '@hyperlight/hyperapp-types': 1.0.4
       '@hyperlight/livereload': 1.0.14
@@ -896,8 +879,8 @@ packages:
     peerDependencies:
       hyperapp: ^2.0.12
     resolution:
-      integrity: sha512-otX7pCJPPSaJSKZsBmGuI3zYIxwydybGDzQBcwpxrAl91FrrgvLCKwPCK32/TxtR6hm2Jjh1kWc2xCRHDhwwzw==
-  /hypermdx/1.0.0:
+      integrity: sha512-BDOaJWIzKbcpE+orDi/39NzFJ2EdjJcvjPN95NFjTDjTN7VAPF1wtHUL4Ty9H/15DSF9EnAJF2AY7NfgQZbJNg==
+  /hypermdx/1.0.1:
     dependencies:
       hast-to-hyperscript: 9.0.1
       mdast-util-to-hast: 10.2.0
@@ -907,7 +890,7 @@ packages:
     engines:
       node: '>=12.4'
     resolution:
-      integrity: sha512-buoULz+3vvtlT9rRxW3302OCfwqm33w8hJFSNaxYwuGsR2KznErswTpLAWklDVQi8/r5htDT0JwuZhs/pYnpMQ==
+      integrity: sha512-ZSau51FWu3AodOYTCp4YENbLGdRx71bXzz1Qd7fwiBZq5fgu3AkfwMP1wFsPK/lILssydrYGmF/M3r8CjINLQw==
   /ignore/5.1.8:
     dev: false
     engines:
@@ -1033,13 +1016,6 @@ packages:
       node: '>= 0.8.0'
     resolution:
       integrity: sha1-OwmSTt+fCDwEkP3UwLxEIeBHZO4=
-  /lowlight/1.19.0:
-    dependencies:
-      fault: 1.0.4
-      highlight.js: 10.6.0
-    dev: false
-    resolution:
-      integrity: sha512-NIskvQ1d1ovKyUytkMpT8+8Bhq3Ub54os1Xp4RAC9uNbXH1YVRf5NERq7JNzapEe5BzUc1Cj4F0I+eLBBFj6hA==
   /lru-cache/6.0.0:
     dependencies:
       yallist: 4.0.0
@@ -1317,13 +1293,6 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-6IQpFBv6e5vz1QAqI+V4k8P2e/3gRrqfCJ9FI+O1FLQTO+Uz6RXZEZOPmTJ6hlGj7gkERzY5BRCv09whKP96/g==
-  /remark-highlight.js/6.0.0:
-    dependencies:
-      lowlight: 1.19.0
-      unist-util-visit: 2.0.3
-    dev: false
-    resolution:
-      integrity: sha512-eNHP/ezuDKoeh3KV+rWLeBVzU3SYVt0uu1tHdsCB6TUJYHwTNMJWZ5+nU+2fJHQXb+7PtpfGXVtFS9zk/W6qdw==
   /remark-parse/9.0.0:
     dependencies:
       mdast-util-from-markdown: 0.8.5
@@ -1648,6 +1617,5 @@ specifiers:
   '@hyperlight/jsx': ^0.0.18
   '@tinyhttp/app': ^1.2.8
   hyperapp: 2.0.12
-  hyperlight: 0.0.30
-  hypermdx: 1.0.0
-  remark-highlight.js: ^6.0.0
+  hyperlight: 0.0.31
+  hypermdx: 1.0.1

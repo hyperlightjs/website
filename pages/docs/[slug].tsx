@@ -20,10 +20,8 @@ export const getServerSideState = async ({ params, res }: { params: Record<strin
 
   const pages = (await readdir(`${root}/docs`)).map((x) => x.slice(0, x.indexOf('.md')))
 
-  const hypermdx = await import('hypermdx').then((mod) => mod.hypermdx)
-
   if (pages.includes(params.slug)) {
-    const md = hypermdx()
+    const md = (await import('hypermdx').then((m) => m.hypermdx))()
 
     let file: string
 

@@ -12,9 +12,7 @@ export default ({ Page }) => {
 }
 
 export const getServerSideState = async () => {
-  const mdx = await import('../../lib/mdx').then((m) => m.mdx)
-
-  const md = await mdx()
+  const md = (await import('hypermdx').then((m) => m.hypermdx))()
 
   const { url } = import.meta
 
