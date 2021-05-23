@@ -21,10 +21,10 @@
   },
   "homepage": "https://github.com/BRA1L0R/hyperlight-website#readme",
   "dependencies": {
-    "@hyperlight/jsx": "^0.0.18",
-    "@tinyhttp/app": "^1.2.8",
-    "hyperapp": "2.0.12",
-    "hyperlight": "0.0.31",
-    "hypermdx": "1.0.1"
+    "@hyperlight/jsx": "^0.0.19",
+    "@tinyhttp/app": "^1.3.3",
+    "hyperapp": "2.0.18",
+    "hyperlight": "0.0.32",
+    "hypermdx": "2.0.1"
   }
 }

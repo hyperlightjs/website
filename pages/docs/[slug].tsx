@@ -2,6 +2,7 @@ import { jsx } from '@hyperlight/jsx'
 import { Nav } from '../../components/Nav'
 import type { Response } from '@tinyhttp/app'
 import { readdir, readFile } from 'fs/promises'
+import { hypermdx } from 'hypermdx'
 
 import '../../styles/main.css'
 import '../../styles/docs.css'
@@ -21,7 +22,7 @@ export const getServerSideState = async ({ params, res }: { params: Record<strin
   const pages = (await readdir(`${root}/docs`)).map((x) => x.slice(0, x.indexOf('.md')))
 
   if (pages.includes(params.slug)) {
-    const md = (await import('hypermdx').then((m) => m.hypermdx))()
+    const md = hypermdx()
 
     let file: string
 
